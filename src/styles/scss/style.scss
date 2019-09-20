@@ -1,0 +1,42 @@
+h1 {
+  color: aqua;
+}
+
+p {
+  color: hotpink;
+}
+
+
+@import "vars";
+
+/* Default styles */
+
+body {
+  margin: 0 auto;
+  font-family: 'Fira Sans', sans-serif;
+  font-size: 13px;
+  line-height: 1.6;
+  color: $gray;
+  background-color: $white;
+}
+
+.container {
+  width: 100%;
+  /*  max-width: 1920px;*/
+  margin: 0 210px;
+  padding: 0 15px;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  user-select: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}
+
+
+/* Blocks */
