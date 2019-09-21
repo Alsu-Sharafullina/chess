@@ -5,7 +5,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "webpack -d --watch",
+    "start": "webpack -d --watch ",
     "dev-server": "nodemon bin/www localhost 8080",
     "dev-client": "webpack-dev-server --port 3000"
   },

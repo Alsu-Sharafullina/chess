@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 
-console.log("HI!!");
-
+console.log("dfgdgd");
 
 export default App;

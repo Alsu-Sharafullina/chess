@@ -10,18 +10,21 @@ const PATHS = {
 };
 
 module.exports = {
+    mode: 'development',
     externals: {
         paths: PATHS
     },
     entry: {
         app : './src/index.js',
-        app : './src/styles/scss/style.scss'
+        super : './src/super.js',
     },
-
+    devtool: 'inline-source-map',
+    devServer : {
+        contentBase: './public'
+    },
     output: {
         filename: "js/[name].min.js",
         path: PATHS.public,
-        /*path : path.join(__dirname, 'public', 'js'),*/
         publicPath: '/'
     },
     module: {
@@ -31,9 +34,9 @@ module.exports = {
                 exclude: /node_modules/,
                 use: {
                     loader: 'babel-loader'
-
                 },
-            },{
+            }
+           ,{
                 test: /\.scss$/,
                 use: [
                     'style-loader',
@@ -49,7 +52,8 @@ module.exports = {
                         options: { sourceMap: true }
                     }
                 ]
-            },{
+            },
+            {
                 test: /\.css$/,
                 use: ['style-loader',
                     MiniCssExtractPlugin.loader,
